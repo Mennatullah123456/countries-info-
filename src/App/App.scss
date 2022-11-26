@@ -1,0 +1,189 @@
+@use "../SASS/Variables" as *;
+@use "../SASS/Mixins" as *;
+@use "../SASS/GlobalRules" as *;
+
+.App {
+  transition: $transition;
+  .scroll-top {
+    all: unset;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.6s;
+    .arrow-icon {
+      font-size: 22px;
+      transition: 0.6s;
+    }
+    &.show {
+      opacity: 1;
+    }
+  }
+  &.light {
+    background-color: $Light-Mode-Background;
+    header {
+      background-color: #fff;
+      color: $light-mode-text;
+    }
+    .home-page {
+      .filters {
+        .search-input {
+          .search-holder {
+            background-color: #fff;
+            .search-icon,
+            .search-field {
+              color: $light-mode-text;
+            }
+          }
+        }
+        .drop-list {
+          .list-head,
+          .dropDown-list {
+            background-color: #fff;
+          }
+          .list-head,
+          .arrow-down {
+            color: $light-mode-text;
+          }
+        }
+      }
+      .generate-Countries {
+        .country {
+          .country-data {
+            background-color: #fff;
+            color: $light-mode-text;
+          }
+        }
+      }
+      .navigation {
+        .load-more {
+          color: $light-mode-text;
+        }
+        .animation {
+          span {
+            background-color: $Dark-Mode-Background;
+          }
+        }
+      }
+    }
+    .details-page {
+      .country-details-section {
+        .back-button {
+          background-color: #fff;
+          color: $light-mode-text;
+        }
+      }
+      .country-information {
+        .details-country-name,
+        .data-word,
+        .data {
+          color: $light-mode-text;
+        }
+        .borders {
+          .data {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .scroll-top {
+      border: 1px solid $Dark-Mode-Background;
+      &:hover {
+        background-color: $Dark-Mode-Background;
+        .arrow-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.dark {
+    background-color: $very-Dark-Blue-BG;
+
+    header {
+      background-color: $Dark-Mode-Background;
+      color: $Dark-Light-Mode-Elements-text;
+    }
+    .home-page {
+      .filters {
+        .search-input {
+          .search-holder {
+            background-color: $Dark-Mode-Background;
+            .search-icon,
+            .search-field,
+            .search-field::placeholder {
+              color: $Dark-Light-Mode-Elements-text;
+            }
+          }
+        }
+        .drop-list {
+          .list-head,
+          .dropDown-list {
+            background-color: $Dark-Mode-Background;
+          }
+          .list-head,
+          .arrow-down,
+          .dropDown-list .drop-item {
+            color: $Dark-Light-Mode-Elements-text;
+          }
+        }
+      }
+      .generate-Countries {
+        .country {
+          .country-data {
+            background-color: $Dark-Mode-Background;
+            color: $Dark-Light-Mode-Elements-text;
+          }
+        }
+      }
+      .navigation {
+        .load-more {
+          color: $Dark-Light-Mode-Elements-text;
+        }
+        .animation {
+          span {
+            background-color: $Light-Mode-Background;
+          }
+        }
+      }
+    }
+    .details-page {
+      .country-details-section {
+        .back-button {
+          background-color: $Dark-Mode-Background;
+          color: $Dark-Light-Mode-Elements-text;
+        }
+      }
+      .country-information {
+        .details-country-name,
+        .data-word,
+        .data {
+          color: $Dark-Light-Mode-Elements-text;
+        }
+        .borders {
+          .data {
+            background-color: $Dark-Mode-Background;
+          }
+        }
+      }
+    }
+    .scroll-top {
+      border: 1px solid $Light-Mode-Background;
+      .arrow-icon {
+        color: #fff;
+      }
+      &:hover {
+        background-color: $Light-Mode-Background;
+        .arrow-icon {
+          color: $light-mode-text;
+        }
+      }
+    }
+  }
+}

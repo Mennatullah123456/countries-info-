@@ -1,0 +1,35 @@
+@mixin media($type) {
+  @if ($type == "mobile") {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($type == "small") {
+    @media (min-width: 767px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if ($type == "medium") {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if ($type == "large") {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($type == "SmallToInf") {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($type == "MedToInf") {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if($type == "smallToLarge") {
+    @media (min-width: 768px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if($type == "LargeMax") {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+}

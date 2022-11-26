@@ -1,0 +1,48 @@
+.navigation {
+  position: relative;
+  width: 50%;
+  min-height: 70px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px 0;
+  cursor: pointer;
+  .load-more {
+    font-size: 18px;
+    text-align: center;
+  }
+  .animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+      opacity: 0;
+      animation: fade 0.5s infinite alternate;
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+    }
+    &.loading {
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}

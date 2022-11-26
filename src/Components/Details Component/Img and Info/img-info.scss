@@ -1,0 +1,50 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.country-information {
+  padding: 50px 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 65vh;
+  @include media(LargeMax) {
+    height: auto;
+    gap: 20px;
+  }
+  .country-details-flag {
+    height: 100%;
+    img {
+      object-fit: cover;
+      height: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .country-details-info {
+    .details-country-name {
+      text-transform: capitalize;
+      margin-bottom: 25px;
+      transition: $transition;
+    }
+    .details-extra-data {
+      justify-content: space-between;
+      .detail-data {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        .word {
+          margin-right: 8px;
+          text-transform: capitalize;
+          font-size: 15px;
+          transition: $transition;
+        }
+        .type {
+          font-size: 14px;
+          transition: $transition;
+        }
+      }
+    }
+    @include media(LargeMax) {
+      text-align: center;
+    }
+  }
+}

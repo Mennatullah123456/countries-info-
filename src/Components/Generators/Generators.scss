@@ -1,0 +1,110 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+// Start country Generators
+.generate-Countries {
+  .row {
+    opacity: 0;
+    transition: 1s;
+    &.active {
+      opacity: 1;
+    }
+  }
+  .country {
+    margin-bottom: 40px;
+    .main-data-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .flag {
+      height: 50%;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .country-data {
+      height: 50%;
+      padding: 15px 20px;
+      transition: $transition;
+      .country-name {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-transform: capitalize;
+      }
+      .data-type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .word {
+          font-weight: 600;
+          margin-right: 5px;
+        }
+        .content {
+          font-size: 14px;
+          letter-spacing: 1px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+// End country Generators
+
+// Start other data Generators
+.data-holder {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  .data-word {
+    font-weight: 500;
+    margin-right: 5px;
+    text-transform: capitalize;
+  }
+  .data {
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-transform: capitalize;
+  }
+  &.languages {
+    .data {
+      display: block;
+      margin-right: 5px;
+    }
+  }
+  &.borders {
+    position: relative;
+    .data-word {
+      margin-right: 15px;
+    }
+    .borders-holder {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      .data {
+        flex-basis: 15%;
+        padding: 3px 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 8px;
+      }
+    }
+
+    @include media(MedToInf) {
+      top: 50px;
+    }
+  }
+  &.currencies {
+    .data {
+      margin-right: 8px;
+    }
+  }
+}
+// End other data Generators

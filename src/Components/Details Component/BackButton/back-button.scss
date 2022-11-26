@@ -1,0 +1,16 @@
+@use "../../../SASS/Variables" as *;
+
+.back-button {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: $transition;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .back-icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+}

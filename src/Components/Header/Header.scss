@@ -1,0 +1,32 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+header {
+  padding: 15px 20px;
+  transition: $transition;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .row {
+    align-items: center;
+  }
+  .main-word {
+    font-size: 25px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .theme-changer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .theme-icon {
+      font-size: 18px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  }
+  .main-word,
+  .theme-icon,
+  .theme-type {
+    transition: $transition;
+  }
+}
